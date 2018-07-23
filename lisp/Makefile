@@ -66,6 +66,7 @@ versionlib: $(PKG)-version.el
 	(when (file-exists-p \"$@\")\
 	  (delete-file \"$@\"))\
 	(setq with-editor-emacsclient-executable nil)\
+        (setq byte-compile-error-on-warn t)\
 	$$suppress_warnings)" \
 	-f batch-byte-compile $<
 
